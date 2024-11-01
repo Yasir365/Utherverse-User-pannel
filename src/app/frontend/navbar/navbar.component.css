@@ -1,0 +1,221 @@
+.navbar-brand {
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.country-dropdown,
+.state-dropdown,
+.cities-dropdown {
+    border-radius: 8px !important;
+    padding: 0.15rem;
+    width: 50%;
+}
+
+.country-dropdown:focus,
+.state-dropdown:focus,
+.cities-dropdown:focus {
+    outline: none
+}
+
+.accredit {
+    padding: 9px 10px;
+}
+
+.accredit[type="checkbox"] {
+    position: relative;
+    pointer-events: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 4px;
+}
+
+.accredit[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 0 224 / 50%);
+}
+
+.otp-modal-body {
+    background: linear-gradient(to right, #5a8ff1, #7c1cfd);
+    color: #ffffff;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.otp-modal-body .row {
+    padding: 2rem 10rem;
+}
+
+.otp-modal-content {
+    background-color: transparent;
+}
+
+.kyc-error {
+    background: #c50000;
+    color: #ffffff;
+    width: 100%;
+    padding: 0.7rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.accredit-link {
+    font-size: 0.9rem;
+    color: #e9b3ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.note {
+    margin-top: 1.5rem;
+    border: 1px solid #3c3838;
+    padding: 1.5rem;
+}
+
+.note-bold {
+    color: white;
+    font-weight: 600;
+}
+
+.resend-otp {
+    text-decoration: underline;
+    color: #cfd3d7;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.message {
+    font-size: 0.85rem;
+    color: rgb(32, 245, 3);
+}
+
+.messageLogin {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgb(68 11 133);
+}
+
+.messageOTP {
+    font-size: 1rem;
+    color: rgb(32, 245, 3);
+}
+
+.register-modal {
+    background-color: transparent !important;
+}
+
+.country-codes {
+    background-image: linear-gradient(to right, #111326, #23363e);
+    border-radius: 8px !important;
+}
+
+.loader {
+    border-top: 2px solid #7105e7;
+    border-left: 2px solid #7105e7;
+    margin-top: 4px;
+    margin-left: 12px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    animation: spin 1.5s linear infinite;
+}
+
+.address1:active,
+.address2:active,
+.address1:focus,
+.address2:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.info-password {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.4rem;
+    cursor: pointer;
+}
+
+.tooltip-pass {
+    position: relative;
+}
+
+.tooltip-content {
+    position: absolute;
+    bottom: 2.3rem;
+    right: 0;
+    border: 1px solid;
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 0.7rem;
+    color: #fbffff;
+    background: #05c2ed36;
+}
+
+.helpDesk-content
+{
+    background-color: #232a43 !important;
+    color: white;
+}
+
+.helpDesk-header
+{
+    color: white;
+}
+
+.zoom-link
+{
+    color: #57c1ff;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.close-helpDesk
+{
+    background: #6709e3;
+    padding: 0.3rem 0.8rem;
+    color: white;
+    border-color: transparent;
+    transition: 0.3s;
+}
+
+.close-helpDeskModal
+{
+    background: #6709e3;
+    color: white;
+    border-color: transparent;
+    transition: 0.3s;
+}
+
+.close-helpDesk:hover, .close-helpDeskModal:hover
+{
+    background: #7e3dd3;
+}
+
+.helpDesk-body
+{
+    padding: 2rem 0;
+}
+
+.zoom-message
+{
+    color: #57c1ff;
+    margin-top: 1rem;
+}
