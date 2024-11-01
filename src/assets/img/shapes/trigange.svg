@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65.802" height="63.746" viewBox="0 0 65.802 63.746">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a2dff2"/>
+      <stop offset="1" stop-color="#3b7da2"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_20054" data-name="Group 20054" transform="matrix(-0.978, -0.208, 0.208, -0.978, 62.427, 76.342)" opacity="0.7">
+    <path id="Subtraction_3" data-name="Subtraction 3" d="M62.719,0V0h0L0,14.631,43.522,60.547,62.718,0Zm-21.7,47.166h0L14.05,18.748l38.886-9.07L41.021,47.165Z" transform="matrix(0.966, -0.259, 0.259, 0.966, 0, 16.233)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
