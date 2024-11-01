@@ -6,19 +6,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgApexchartsModule } from 'ng-apexcharts';
-import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
-import { BnNgIdleService } from 'bn-ng-idle';
-
-import { NguCarouselModule } from '@ngu/carousel';
-import { AddCommasDirective } from './add-commas.directive';
-import { CountdownService } from './services/countdown.service';
-import { CookieService } from 'ngx-cookie-service';
 import { AuthInterceptor } from './services/interceptor.service';
 import { AppRouting } from './app.routing';
 
 @NgModule({
-  declarations: [AppComponent, AddCommasDirective],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRouting,
@@ -32,16 +24,10 @@ import { AppRouting } from './app.routing';
       progressBar: true,
       preventDuplicates: true,
     }),
-    NgApexchartsModule,
-    AngularSignaturePadModule,
-    NguCarouselModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-    BnNgIdleService,
-    CountdownService,
-    CookieService,
   ],
 
   bootstrap: [AppComponent],
