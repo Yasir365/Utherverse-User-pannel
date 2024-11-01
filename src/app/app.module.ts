@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FrontendModule } from './frontend/frontend.module';
-import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
@@ -17,13 +16,14 @@ import { AddCommasDirective } from './add-commas.directive';
 import { CountdownService } from './services/countdown.service';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthInterceptor } from './services/interceptor.service';
+import { AppRouting } from './app.routing';
 
 @NgModule({
   declarations: [AppComponent, AddCommasDirective],
   imports: [
     BrowserModule,
     FrontendModule,
-    AppRoutingModule,
+    AppRouting,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
