@@ -1309,7 +1309,6 @@ section.process-sec {
   );
 }
 
-///////////// Counting box ///////////////////////////
 .couting-box {
   // height: fit-content;
   padding: 0 10px;
@@ -1906,32 +1905,11 @@ section.process-sec {
   border: 2px solid #474747;
   position: relative;
 
-  .counting {
-    background: linear-gradient(
-      90deg,
-      rgba(53, 141, 147, 0.34) 0%,
-      rgba(174, 233, 141, 0.34) 100%
-    );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6.27px;
-    font-weight: 500;
-    font-size: 17px;
-    height: fit-content;
-    padding: 0 8px;
-    margin: 15px 0;
-  }
+  
 }
 
 .timer_1 {
-  .counting {
-    background: linear-gradient(
-      90deg,
-      rgba(53, 141, 147, 0.34) 0%,
-      rgba(174, 233, 141, 0.34) 100%
-    );
-  }
+  
 }
 
 .cal_prof_btn {
@@ -1964,15 +1942,6 @@ section.process-sec {
   top: 22%;
 }
 
-.counting.hours::before,
-.counting.day::before {
-  content: url("./../../../assets/images/shfl_icon.svg");
-  display: inline-block;
-  position: absolute;
-  right: 42px;
-  top: 11px;
-  transform: scale(1.6);
-}
 
 .profit-rapper {
   //background: #f5f7ff;
@@ -2021,11 +1990,6 @@ section.process-sec {
     font-size: 14px;
   }
 
-  .timer .counting {
-    padding: 0 10px;
-    margin: 15px 0;
-    font-size: 21px;
-  }
 
   .flash_sale_bar h2 {
     font-size: 21px;
@@ -2037,17 +2001,7 @@ section.process-sec {
     width: 88px;
   }
 
-  .counting.hours::before {
-    right: 37px;
-    top: 11px;
-    transform: none;
-  }
 
-  .counting.day::before {
-    right: 27px;
-    top: 11px;
-    transform: none;
-  }
 
   .fa-question {
     font-size: 11px;
@@ -2089,10 +2043,6 @@ section.process-sec {
     font-size: 18px;
   }
 
-  .timer .counting {
-    font-size: 17px;
-  }
-
   .discounted-price::after {
     width: 75px;
   }
@@ -2121,30 +2071,10 @@ section.process-sec {
     font-size: 19px;
   }
 
-  .timer .counting {
-    font-size: 16.59px;
-  }
 
   .couting-box .hour,
   .couting-box .days {
     font-size: 12px;
-  }
-
-  .timer .counting {
-    padding: 0 10px;
-    margin: 15px 0;
-  }
-
-  .counting.hours::before {
-    right: 37px;
-    top: 11px;
-    transform: none;
-  }
-
-  .counting.day::before {
-    right: 27px;
-    top: 11px;
-    transform: none;
   }
 
   .fa-question {
@@ -2153,18 +2083,6 @@ section.process-sec {
 
   .couting-box {
     padding: 4px 10px;
-  }
-
-  .counting.day::before {
-    right: 23px;
-    top: 14px;
-    transform: none;
-  }
-
-  .counting.hours::before {
-    right: 31px;
-    top: 14px;
-    transform: none;
   }
 
   .fa-question {
@@ -2207,10 +2125,6 @@ section.process-sec {
   .discounted-price::after {
     width: 63px;
   }
-
-  .time .counting {
-    font-size: 15px;
-  }
 }
 
 @media (width <=1200px) {
@@ -2222,26 +2136,11 @@ section.process-sec {
     font-size: 18px;
   }
 
-  .timer .counting {
-    padding: 0px 3px;
-  }
-
-  .counting.day::before {
-    right: 18px;
-  }
-
-  .counting.hours::before {
-    right: 24px;
-  }
-
   .top_offer {
     font-size: 21px;
     /* Adjust font size for large desktops */
   }
 
-  .time .counting {
-    font-size: 13px;
-  }
 }
 
 @media (992px <=width <=1100px) {
@@ -2261,10 +2160,6 @@ section.process-sec {
     font-size: 10px;
   }
 
-  .timer .counting {
-    font-size: 13.59px;
-  }
-
   .calculate-txt {
     font-size: 11px;
   }
@@ -2277,16 +2172,6 @@ section.process-sec {
   .couting-box .hour,
   .couting-box .days {
     font-size: 10px;
-  }
-
-  .counting.day::before {
-    right: 18px;
-    transform: scale(0.8);
-  }
-
-  .counting.hours::before {
-    right: 18px;
-    transform: scale(0.8);
   }
 
   .top_offer {
@@ -2390,43 +2275,10 @@ section.process-sec {
     font-size: 16px;
   }
 
-  .timer .counting {
-    font-size: 18.59px;
-  }
 }
-
-// @media (max-width: 668px) {
-//   .za-nav-list {
-//     top: 12px;
-//     right: unset;
-//     left: 17%;
-//   }
-
-//   button.bg-gradient-pink1 {
-//     padding: 3px 6px !important;
-//     font-size: 10px !important;
-//   }
-
-//   .social-media-icon {
-//     width: 28px;
-//     height: 28px;
-//     object-fit: contain;
-//   }
-
-//   nav .logo {
-//     width: 60px;
-//     object-fit: contain;
-//   }
-
-//   .selected-flag {
-//     width: 23px !important;
-//     margin: 2px !important;
-//   }
-// }
 
 .thaks-text {
   text-align: left;
-  //line-height: 35px;
   font-size: 15px;
 }
 
