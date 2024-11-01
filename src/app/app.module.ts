@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { FrontendModule } from './frontend/frontend.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
@@ -22,7 +21,6 @@ import { AppRouting } from './app.routing';
   declarations: [AppComponent, AddCommasDirective],
   imports: [
     BrowserModule,
-    FrontendModule,
     AppRouting,
     HttpClientModule,
     FormsModule,

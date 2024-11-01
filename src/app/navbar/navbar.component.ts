@@ -10,9 +10,9 @@ import { LoginService } from 'src/app/services/login.service';
 import { ProjectGetService } from 'src/app/services/project-get.service';
 import { PublicService } from 'src/app/services/public/public.service';
 import { on } from 'stream';
-import codes from '../../../assets/codes.json';
-import { ConfirmPasswordValidator } from '../../core/validators/confirm-password.validator';
-import { WalletAddressValidator } from '../../core/validators/confirm-password.validator';
+import codes from '../../assets/codes.json';
+import { ConfirmPasswordValidator } from '../core/validators/confirm-password.validator';
+import { WalletAddressValidator } from '../core/validators/confirm-password.validator';
 // import { ReCaptchaV3Service } from 'ng-recaptcha';
 // import { RecaptchaService } from 'src/app/services/public/recaptcha.service';
 

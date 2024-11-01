@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PagenotfoundComponent } from './frontend/pagenotfound/pagenotfound.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RoutingService } from './services/routing.service';
-import { LandingPageComponent } from './frontend/landing-page/landing-page.component';
-import { StakingComponent } from './frontend/staking/staking.component';
-import { PoolsComponent } from './frontend/pools/pools.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { StakingComponent } from './staking/staking.component';
+import { PoolsComponent } from './pools/pools.component';
 const Routes: Routes = [
   {
     path: '',

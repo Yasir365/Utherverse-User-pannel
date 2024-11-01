@@ -6,7 +6,7 @@ import { BnNgIdleService } from 'bn-ng-idle';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CountdownService } from './services/countdown.service';
-import { TokenSalesService } from './frontend/staking/token-sales.service';
+import { TokenSalesService } from './staking/token-sales.service';
 
 @Component({
   selector: 'app-root',
