@@ -5,7 +5,7 @@ const Routes: Routes = [
 
   {
     path: '',
-    loadComponent: () => import('./landing-page/landing-page.component').then(m => m.LandingPageComponent)
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
   },
   {
     path: 'stake',
@@ -16,7 +16,7 @@ const Routes: Routes = [
     loadComponent: () => import('./pools/pools.component').then(m => m.PoolsComponent)
   },
   {
-    path: 'pools',
+    path: '**',
     loadComponent: () => import('./pagenotfound/pagenotfound.component').then(m => m.PagenotfoundComponent)
   }
 ];

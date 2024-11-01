@@ -104,9 +104,9 @@ window.Buffer = buffer.Buffer;
 
 @Component({
   standalone: true,
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss'],
+  selector: 'app-home-page',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
   imports: [
     CommonModule,
     FormsModule,
@@ -119,7 +119,7 @@ window.Buffer = buffer.Buffer;
   ],
   providers: [DecryptCryptoPipe],
 })
-export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly mobileBreakpoint: number = 768;
   isMobile: boolean = false;
   userWalletFormGroup: FormGroup;
