@@ -40,18 +40,18 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.autoLogout();
     }
 
-      let apiUrl = `${constants.DOMAIN_URL}offer`
-      this.countdownService.checkAndStartCountdown(apiUrl);
+    let apiUrl = `${constants.DOMAIN_URL}offer`
+    this.countdownService.checkAndStartCountdown(apiUrl);
 
-      this.partners_images().subscribe((response: any)=>{
-        if(response.success){
-          this.tokens_sales.form_images = response.partners.map((item: any) => {
-            return {
-              ...item,
-              logo: `${constants.DOMAIN_URL}/uploads/partner_logos/${item?.logo?.split('\\').pop()}`
-            }
-          })
-        }
+    this.partners_images().subscribe((response: any) => {
+      if (response.success) {
+        this.tokens_sales.form_images = response.partners.map((item: any) => {
+          return {
+            ...item,
+            logo: `${constants.DOMAIN_URL}/uploads/partner_logos/${item?.logo?.split('\\').pop()}`
+          }
+        })
+      }
     })
   }
 
