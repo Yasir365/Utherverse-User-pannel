@@ -1,27 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RoutingService } from './services/routing.service';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { StakingComponent } from './staking/staking.component';
-import { PoolsComponent } from './pools/pools.component';
 const Routes: Routes = [
+
   {
     path: '',
-    component: LandingPageComponent,
-  },
-  {
-    path: 'pools',
-    component: PoolsComponent,
+    loadComponent: () => import('./landing-page/landing-page.component').then(m => m.LandingPageComponent)
   },
   {
     path: 'stake',
-    component: StakingComponent,
+    loadComponent: () => import('./staking/staking.component').then(m => m.StakingComponent)
   },
   {
-    path: '**',
-    component: PagenotfoundComponent,
+    path: 'pools',
+    loadComponent: () => import('./pools/pools.component').then(m => m.PoolsComponent)
   },
+  {
+    path: 'pools',
+    loadComponent: () => import('./pagenotfound/pagenotfound.component').then(m => m.PagenotfoundComponent)
+  }
 ];
 
 @NgModule({
