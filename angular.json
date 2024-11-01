@@ -48,7 +48,6 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets/oswald/Oswald-Bold.woff",
               "src/assets"
             ],
             "styles": ["src/styles.css"],
