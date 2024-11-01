@@ -1,61 +1,13 @@
 <header>
   <nav style="position: sticky; top: 0; z-index: 90">
-    <div
-      class="container-fluid"
-      [ngClass]="{ 'bg-black': isScrolled, 'bg-transparent': !isScrolled }"
-    >
-      <div class="d-flex justify-content-between align-items-center">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between align-items-center ps-3 pe-3 pt-2 pb-2">
         <div class="logo">
-          <img
-            src="../../../assets/images/New_Registered_Logo_with_Tag.png"
-            alt="Logo"
-          />
+          <img src="../../../assets/images/New_Registered_Logo_with_Tag.png" alt="Logo" />
         </div>
 
-        <div
-          class="col-xl-8 col-10 social-media-icons d-flex justify-content-end gap-3 align-items-center osw-bold d-none"
-        >
-          <div id="google_translate_element" class="d-none"></div>
-          <div class="languag lang-switch ms-3">
-            <ul class="za-nav-list guide-target mt-1">
-              <li>
-                <img
-                  class="selected-flag"
-                  data-src=""
-                  alt="Selected Language"
-                  #selected_language
-                  loading="lazy"
-                />
-                <i class="ms-2 fas fa-chevron-down text-white"></i>
-                <ul
-                  class="za-nav-dropdown list-unstyled p-3 bg-dark rounded"
-                  #list_languages
-                  style="display: none"
-                >
-                  <li role="button" class="text-white"></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="d-flex gap-2">
-          <!-- <button
-            type="button"
-            class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2"
-            style="width: fit-content; height: fit-content; margin-right: 10px"
-            (click)="nftPresalePage()"
-          >
-            NFt Presale
-          </button> -->
-          <button
-            type="button"
-            class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2"
-            style="width: fit-content; height: fit-content; margin-right: 10px"
-            (click)="stakePage()"
-          >
-            Stake
-          </button>
+        <div>
+          <button type="button" class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2" routerLink="/claim"> > Claim </button>
         </div>
       </div>
     </div>
@@ -66,60 +18,25 @@
       <div class="row justify-content-center">
         <div class="col-sm-11 col-lg-11">
           <div class="presale-live justify">
-            <h2 class="title text-center">
-              UTHX Token launch is<span> ON</span> - We need your Solana Phantom
-              Wallet
-            </h2>
+            <h2 class="title text-center"> UTHX Token launch is<span> ON</span> - We need your Solana Phantom Wallet </h2>
           </div>
 
           <hr />
 
           <div style="width: 100%" class="d-flex">
-            <div
-              class="d-flex"
-              id="buy-now"
-              style="
-                padding: 15px;
-                border-radius: 10px;
-                font-size: 14px;
-                color: white;
-                width: 100%;
-              "
-            >
-              <div
-                class="d-flex flex-row justify-content-between w-100 flex-wrapper-2"
-              >
-                <p class="d-flex align-items-center flex-wrap gap-2">
-                  <span style="font-family: 'mont-bold'">
-                    Contract Address:</span
-                  >
+            <div class="d-flex" id="buy-now" style=" padding: 15px; border-radius: 10px; font-size: 14px; color: white; width: 100%; " >
+              <div class="d-flex justify-content-between w-100 flex-wrapper-2" >
+                <div class="d-flex align-items-center flex-wrap gap-2">
+                  <span> Contract Address:</span >
                   <span class="d-flex align-items-center">
-                    <a
-                      style="text-decoration: none; color: whitesmoke"
-                      href="https://solscan.io/token/CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD"
-                      target="_blank"
-                      class="text-truncate"
-                      >CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD</a
+                    <a style="text-decoration: none; color: whitesmoke" href="https://solscan.io/token/CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD" target="_blank" class="text-truncate" >
+                      CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD
+                    </a
                     >
-                    <i
-                      class="copy-button fa-solid fa-copy text-center ml-2 copy_icon"
-                      style="margin-left: 10px; cursor: pointer"
-                      (click)="
-                        copied_msg(
-                          'CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD'
-                        )
-                      "
-                    ></i>
+                    <i class="copy-button fa-solid fa-copy text-center ml-2 copy_icon" style="margin-left: 10px; cursor: pointer" (click)=" copied_msg() " ></i>
                   </span>
-                </p>
-                <div class="d-flex justify-content-end">
-                  <a
-                    class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2"
-                    href="https://raydium.io/swap/?inputMint=sol&outputMint=CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD"
-                    target="_blank"
-                    >Buy UTHX Token</a
-                  >
                 </div>
+                <a class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2" href="https://raydium.io/swap/?inputMint=sol&outputMint=CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD" target="_blank" >Buy UTHX Token</a >
               </div>
             </div>
           </div>
@@ -127,141 +44,14 @@
           <hr />
 
           <div class="row justify-content-between mb-2">
-            <div class="d-lg-none border-info col-sm-12">
-              <div class="video-container-below"></div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 p-0 col-sm-12 my-md-5">
-              <div
-                *ngIf="!isMobile"
-                class="Overview_walletArea__TxteC"
-                id="buy-now"
-              >
-                <form
-                  class="Methods_AfterCountdown___4Qym Methods_dashWallet__IGZg5 connectBox custom-height"
-                  [formGroup]="userWalletFormGroup"
-                  (ngSubmit)="submitWalletAddress()"
-                  style="padding: 50px 40px"
-                  *ngIf="showDevpage"
-                >
-                  <div
-                    class="btn-area Methods_newBtnsArea__soL79 d-flex justify-content-center flex-column"
-                  >
-                    <div class="d-flex justify-content-end pt-5"></div>
-                    <button
-                      class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2 w-100"
-                      accordion
-                      type="button"
-                      (click)="connect_evm_wallet()"
-                    >
-                      {{
-                        currentAccount
-                          ? "Disconnect Evm Wallet"
-                          : "Connect Evm Wallet"
-                      }}
-                    </button>
-
-                    <div class="input-field">
-                      <label for="" *ngIf="currentAccount">{{
-                        currentAccount
-                      }}</label>
-                      <label
-                        for=""
-                        *ngIf="!currentAccount"
-                        style="color: rgb(152, 152, 152)"
-                        >{{ "Connect Evm wallet" }}</label
-                      >
-                    </div>
-
-                    <div class="d-flex justify-content-end pt-5"></div>
-                    <button
-                      class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2"
-                      accordion
-                      type="button"
-                      (click)="connectPhantomWallet()"
-                      *ngIf="!isMobile"
-                    >
-                      {{
-                        publicKey
-                          ? "Disconnect Phantom Wallet"
-                          : "Connect Phantom Wallet"
-                      }}
-                    </button>
-
-                    <!-- <button
-                      class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2"
-                      accordion
-                      type="button"
-                      (click)="connectPhantomWalletMobile()"
-                      *ngIf="isMobile"
-                    >
-                      Click To Open App
-                    </button>
-
-                    <input
-                      *ngIf="isMobile"
-                      type="text"
-                      class="wallet-input__box"
-                      formControlName="solana_wallet"
-                      placeholder="Enter Solana Wallet Address"
-                      required
-                    /> -->
-                    <div class="input-field" *ngIf="!isMobile">
-                      <label for="" *ngIf="publicKey">{{ publicKey }}</label>
-                      <label
-                        for=""
-                        *ngIf="!publicKey"
-                        style="color: rgb(152, 152, 152)"
-                        >{{ "Connect Solana wallet" }}</label
-                      >
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2 w-100 mt-4"
-                    [disabled]="userWalletFormGroup.invalid"
-                  >
-                    Search
-                  </button>
-                  <strong class="text-danger"
-                    >Please make sure the you are on BSC chain.</strong
-                  >
-                  <p
-                    class="text-danger mt-4 mb-3"
-                    style="color: rgb(255, 99, 99)"
-                    *ngIf="isMobile"
-                  >
-                    <span class="d-flex">
-                      <span style="font-size: 16.5px; font-weight: 700">
-                        Note:
-                      </span>
-                      <span class="text-break" style="margin-left: 7px">
-                        *You will be copying and pasting your wallet to provide
-                        the Solana wallet and are solely responsible for the
-                        address provided where you want your UTHX airdrop sent.
-                      </span>
-                    </span>
-                  </p>
-                </form>
-
-                <ng-container *ngIf="!showDevpage">
+            <div class="col-lg-4 col-12 my-md-4">
+              <div class="Overview_walletArea__TxteC" id="buy-now" >
+                <ng-container >
                   <div class="text-white py-2">
-                    <h2 class="h2 text-break">
-                      Exciting Update: Transition to Claims Page
-                    </h2>
+                    <h3 class="h2 text-break"> Exciting Update: Transition to Claims Page </h3>
                   </div>
 
-                  <div
-                    class="text-white"
-                    style="
-                      background-color: #26262a;
-                      padding: 30px 42px;
-                      border: 1px solid #7c7c7c;
-                      border-radius: 26px;
-                      margin: 1rem;
-                    "
-                  >
+                  <div class="text-white" style=" background-color: #26262a; padding: 30px 42px; border: 1px solid #7c7c7c; border-radius: 16px;" >
                     <h2 class="h5 text-break" style="line-height: 25px">
                       We are thrilled to announce that we are moving from our
                       current airdrop system to a more streamlined Claims
@@ -283,227 +73,54 @@
                   </div>
                 </ng-container>
               </div>
-              <div *ngIf="isMobile" class="Overview_walletArea__TxteC">
-                <div class="container m-0 p-0">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="text-white py-4">
-                        <h2 class="h2 text-break px-2">
-                          Mobile registration is disabled, please use the
-                          desktop for registring your Solana wallet.
-                        </h2>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <div
-              class="col-xl-8 col-lg-8 d-flex flex-column justify-content-stretch border-info my-md-4"
-            >
-              <div
-                class="video-rapper mt-3"
-                style="padding: 0 30px; width: 100%; height: 100%"
-              >
-                <iframe
-                  width="100%"
-                  class="youtube-video"
-                  src="https://www.youtube.com/embed/2w2UckgtXG8?autoplay=1&mute=1&loop=1&playlist=2w2UckgtXG8&showinfo=0&rel=0&vq=hd1080&modestbranding=1&hd=1"
-                  allow="autoplay"
-                  frameborder="0"
-                  allowfullscreen
-                >
-                </iframe>
+            <div class="col-lg-8 d-flex flex-column justify-content-stretch border-info my-md-5" >
+              <div class="video-rapper mt-3" >
+                <iframe width="100%" class="youtube-video" src="https://www.youtube.com/embed/2w2UckgtXG8?autoplay=1&mute=1&loop=1&playlist=2w2UckgtXG8&showinfo=0&rel=0&vq=hd1080&modestbranding=1&hd=1" allow="autoplay" frameborder="0" allowfullscreen > </iframe>
               </div>
             </div>
           </div>
 
-          <!-- .......here the heading -->
         </div>
       </div>
     </div>
   </div>
 </header>
 
-<button
-  class="btn d-none"
-  data-bs-toggle="modal"
-  data-bs-target="#staticBackdrop"
-  id="openSearchResult"
-></button>
 
-<!-- <section class="info-sec" #signup_form>
-  <div class="container"></div>
-  <div class="container m-0 p-0" style="margin-left: 110px !important">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <h2>Why do we need your Solana Phantom Wallet? <br /></h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container m-0 p-0" style="margin-left: 110px !important">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <h2>
-            To ensure we can airdrop your UTHX tokens and allow you to claim
-            them in the future. <br />
-          </h2>
-          <span>
-            Who needs to provide us with a Phantom Wallet? If you fall into any
-            of the following categories, you'll need to provide a wallet to
-            receive your UTHX tokens: • Pre-purchase buyers: Individuals who
-            bought UTHX during any pre-purchase round. • Utherverse package
-            buyers: Individuals who purchased packages from Utherverse. Which
-            also came with UTHX tokens. If you purchased any other way other
-            than through a crypto wallet those are being handled by our please
-            reaching out to sharona@kulabrands.com We will be adding additional
-            Solana-based wallets soon for your convenience.
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<section class="info-sec d-flex flex-column align-items-center" #signup_form>
-  <!-- Headline: Why do we need your Solana Phantom Wallet? -->
-  <div class="container m-0 p-0">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <h2 class="h2 text-break">
-            Why do we need your Solana Phantom Wallet?
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bullet: To ensure we can airdrop your UTHX tokens... -->
-  <div class="container m-0 p-0">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <ul class="custom-bullets">
-            <li class="h3 text-break">
-              To ensure we can airdrop your UTHX tokens and allow you to claim
-              them in the future.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Headline: Who needs to provide us with a Phantom Wallet? -->
-  <div class="container m-0 p-0">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <h2 class="h2 text-break">
-            Who needs to provide us with a Phantom Wallet? If you fall into any
-            of the following categories, you'll need to provide a wallet to
-            receive your UTHX tokens:
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bullet points: Pre-purchase buyers and Utherverse package buyers -->
-  <div class="container m-0 p-0">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <ul class="custom-bullets">
-            <li class="h3 text-break">
-              Pre-purchase buyers: Individuals who bought UTHX during any
-              pre-purchase round.
-            </li>
-            <li class="h3 text-break">
-              Utherverse package buyers: Individuals who purchased packages from
-              Utherverse. Which also came with UTHX tokens.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Headline: If you purchased any other way... -->
-  <div class="container m-0 p-0">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <h2 class="h2 text-break">
-            If you purchased any other way other than through a crypto wallet
-            those are being handled by our team, please reach out to
-            businessdevelopment{{ "@" }}utherverse.io.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bullet point: Additional wallets coming soon -->
-  <div class="container m-0 p-0">
-    <div class="row">
-      <div class="col-12">
-        <div class="text-white py-4">
-          <ul class="custom-bullets">
-            <li class="h3 text-break">
-              We will be adding additional Solana-based wallets soon for your
-              convenience.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="info-sec">
+  <h4 class="mb-3"> Why do we need your Solana Phantom Wallet? </h4>
+  <ul  style="list-style: circle;" class="mb-5 ms-3">
+    <li class="h5">To ensure we can airdrop your UTHX tokens and allow you to claim them in the future.</li>
+  </ul>
+  
+  <h4 class="mb-3"> Who needs to provide us with a Phantom Wallet? If you fall into any of the following categories, you'll need to provide a wallet to receive your UTHX tokens: </h4>
+  <ul style="list-style: circle;" class="mb-5 ms-3">
+    <li class="h5"> Pre-purchase buyers: Individuals who bought UTHX during any pre-purchase round.</li>
+    <li class="h5"> Utherverse package buyers: Individuals who purchased packages from Utherverse. Which also came with UTHX tokens.</li>
+  </ul>
+  
+  <h4 class="mb-3"> If you purchased any other way other than through a crypto wallet those are being handled by our team, please reach out to businessdevelopment{{ "@" }}utherverse.io. </h4>
+  <ul  style="list-style: circle;" class="mb-5 ms-3">
+    <li class="h5"> We will be adding additional Solana-based wallets soon for your convenience.</li>
+  </ul>
 </section>
 
 <section class="subscribe-email d-flex flex-column align-items-start">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-10 col-sm-11">
+      <div class="col-lg-7 col-sm-11">
         <p class="text-white py-2 fs-3">
           <strong>FOR BUSINESS OR PRESS INQUIRIES CONTACT US:</strong>
         </p>
-        <form
-          #subForm="ngForm"
-          (ngSubmit)="subEmail(subForm)"
-          class="d-flex flex-column gap-3"
-          action=""
-        >
+        <form #subForm="ngForm" (ngSubmit)="subEmail(subForm)" class="d-flex flex-column gap-3" action="" >
           <label for="" class="text-white">EMAIL</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            ngModel
-            required
-            placeholder="user@gmail.com"
-            class="form-control-lg"
-          />
+          <input type="email" id="email" name="email" ngModel required placeholder="user@gmail.com" class="form-control-lg" />
           <div *ngIf="subForm.controls.email?.dirty">
-            <!-- <div class="error" *ngIf="subForm.controls.email?.errors?.required">
-                            Email is required.
-                        </div> -->
-            <div class="error" *ngIf="subForm.controls.email?.errors?.email">
-              Invalid email format.
-            </div>
+            <div class="error" *ngIf="subForm.controls.email?.errors?.email"> Invalid email format. </div>
           </div>
-          <button
-            type="submit"
-            [disabled]="!subForm.valid"
-            type="submit"
-            class="d-flex align-self-center submit-btn rounded-pill"
-          >
+          <button type="submit" [disabled]="!subForm.valid" type="submit" class="d-flex align-self-center submit-btn rounded-pill" >
             SIGN UP
           </button>
         </form>
@@ -516,24 +133,16 @@
   <div class="col-9 mx-auto d-flex justify-content-center py-5 mt-5">
     <div class="col-12">
       <div class="text-center">
-        <p class="text-white">
-          <strong>FOLLOW US</strong>
-        </p>
+        <p class="text-white"> <strong>FOLLOW US</strong> </p>
         <div class="d-flex justify-content-center gap-2 mt-2">
-          <a
-            href="https://www.youtube.com/@utherverseio"
-            class="social-media-icon"
-          >
+          <a href="https://www.youtube.com/@utherverseio" class="social-media-icon" >
             <img src="../../../assets/images/youtube.png" alt="" />
           </a>
           <a href="https://twitter.com/Utherverse" class="social-media-icon">
             <img src="../../../assets/images/twitter2x.png" alt="" />
           </a>
 
-          <a
-            href="https://www.instagram.com/utherverse/"
-            class="social-media-icon"
-          >
+          <a href="https://www.instagram.com/utherverse/" class="social-media-icon" >
             <img src="../../../assets/images/instagram2x.png" alt="" />
           </a>
 
@@ -543,27 +152,9 @@
         </div>
       </div>
       <div class="d-flex justify-content-center gap-2 text-white mt-3">
-        <button
-          class="privacy_policy"
-          data-bs-toggle="modal"
-          data-bs-target="#personalPolicies"
-        >
-          Personal Data Policy
-        </button>
-        <button
-          class="privacy_policy"
-          data-bs-toggle="modal"
-          data-bs-target="#cookiesPolicies"
-        >
-          Cookie Policy
-        </button>
-        <button
-          class="privacy_policy"
-          data-bs-toggle="modal"
-          data-bs-target="#termCondition"
-        >
-          Terms and Conditions
-        </button>
+        <button class="privacy_policy" data-bs-toggle="modal" data-bs-target="#personalPolicies" > Personal Data Policy </button>
+        <button class="privacy_policy" data-bs-toggle="modal" data-bs-target="#cookiesPolicies" > Cookie Policy </button>
+        <button class="privacy_policy" data-bs-toggle="modal" data-bs-target="#termCondition" > Terms and Conditions </button>
       </div>
     </div>
   </div>
@@ -573,466 +164,3 @@
     </p>
   </div>
 </footer>
-
-<button
-  class="d-none"
-  data-bs-toggle="modal"
-  data-bs-target="#wallets_selection_modal"
-  #wallets_selection_modal
-></button>
-<div
-  class="modal fade wallet_modal"
-  id="wallets_selection_modal"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="exampleModalCenterTitle"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
-    <div class="modal-content uv-bg-color text-white">
-      <div class="modal-header">
-        <button
-          type="button"
-          class="btn-close bg-white"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-          (click)="closWalletSelectionModal()"
-          style="font-size: 11px"
-        ></button>
-      </div>
-      <div class="modal-body py-4 text-white">
-        <div class="">
-          <p class="text-center text-center py-3" style="font-size: 23px">
-            Select Wallet
-          </p>
-
-          <div class="d-flex justify-content-center gap-3">
-            <div>
-              <button
-                type="button"
-                class="py-3 border-0 submit-btn"
-                (click)="openWallets('walletConnect')"
-              >
-                Metamask
-              </button>
-            </div>
-            <div>
-              <div class="wallet-img" (click)="openWallets('walletConnect')">
-                <img src="../../../assets/img/metamask.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center gap-3">
-            <div>
-              <button
-                type="button"
-                class="py-3 border-0 submit-btn"
-                (click)="openWallets('walletConnect')"
-              >
-                Trust
-              </button>
-            </div>
-            <div>
-              <div class="wallet-img" style="border-radius: 8px">
-                <img
-                  (click)="openWallets('walletConnect')"
-                  src="../../../assets/img/trust-wallet-logo.svg"
-                  style="background: white; padding: 6px"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center gap-3">
-            <div>
-              <button
-                type="button"
-                class="py-3 border-0 submit-btn"
-                (click)="openWallets('walletConnect')"
-              >
-                Coinbase
-              </button>
-            </div>
-            <div>
-              <div
-                (click)="openWallets('walletConnect')"
-                class="wallet-img"
-                style="border-radius: 8px"
-              >
-                <img
-                  src="../../../assets/img/coinbase-logo.svg"
-                  style="background: white"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="d-flex justify-content-center gap-3">
-            <div>
-              <button
-                type="button"
-                class="py-3 border-0 submit-btn"
-                (click)="openWallets('walletConnect')"
-              >
-                Wallet Connect
-              </button>
-            </div>
-            <div>
-              <div (click)="openWallets('walletConnect')" class="wallet-img">
-                <img src="../../../assets/images/walletconnect.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Button trigger modal -->
-
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="staticBackdrop"
-  data-bs-backdrop="static"
-  data-bs-keyboard="false"
-  tabindex="-1"
-  aria-labelledby="staticBackdropLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content dark-modal">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">
-          {{
-            (showWalletDetails?.all_unconfirmed_records?.length === 0 &&
-              showWalletDetails?.all_confirmed_records?.length === 0) ||
-            !showWalletDetails
-              ? "No Data"
-              : "Records Found"
-          }}
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <ng-container>
-          <ng-container #confirmed>
-            <h6>Confirmed Records</h6>
-            <ng-container
-              *ngIf="
-                showWalletDetails?.all_confirmed_records?.length === 0 ||
-                !showWalletDetails
-              "
-            >
-              <div class="d-flex justify-content-center">
-                <img src="../../../assets/images/no-data.png" alt="" />
-              </div>
-            </ng-container>
-
-            <ng-container
-              *ngIf="showWalletDetails?.all_confirmed_records.length > 0"
-            >
-              <div class="d-flex flex-column justify-content-start mt-2 mb-5">
-                <div
-                  class="d-flex col-xl-12 col-md-12 col-sm-12 style-1"
-                  style="
-                    max-height: 400px !important;
-                    overflow-y: auto !important;
-                  "
-                >
-                  <table class="table table-dark table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Purchase Method</th>
-                        <th scope="col">Total Token Purchased</th>
-                        <th scope="col">Total Token Allocated</th>
-                        <th scope="col">Evm Wallet</th>
-                        <th scope="col">Sol Wallet</th>
-                      </tr>
-                    </thead>
-                    <tbody
-                      *ngFor="
-                        let data of showWalletDetails.all_confirmed_records;
-                        let i = index
-                      "
-                    >
-                      <tr>
-                        <td>{{ i + 1 }}</td>
-                        <td>{{ data?.purchase_method }}</td>
-                        <td>{{ data?.total_token_purchased }}</td>
-                        <td>{{ data?.total_token_allocated }}</td>
-                        <td>
-                          <div class="d-flex align-items-center">
-                            <span>
-                              {{
-                                data?.evm_wallet
-                                  ? (data?.evm_wallet )
-                                  : "-"
-                              }}
-                            </span>
-                            <i
-                              *ngIf="data?.evm_wallet"
-                              class="fa-solid fa-copy copy-icon"
-                              title="Copy Hash"
-                              style="margin-left: 3px"
-                              (click)="copyHashToClipboard(data?.evm_wallet)"
-                            ></i>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="d-flex align-items-center">
-                            <span>
-                              {{
-                                data?.solana_wallet
-                                  ? (data?.solana_wallet )
-                                  : "-"
-                              }}
-                            </span>
-                            <i
-                              *ngIf="data?.solana_wallet"
-                              class="fa-solid fa-copy copy-icon"
-                              title="Copy Hash"
-                              style="margin-left: 3px"
-                              (click)="copyHashToClipboard(data?.evm_wallet)"
-                            ></i>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </ng-container>
-          </ng-container>
-          <ng-container #unconfirmed>
-            <h6>Unconfirmed Records</h6>
-            <ng-container
-              *ngIf="
-                showWalletDetails?.all_unconfirmed_records.length === 0 ||
-                !showWalletDetails
-              "
-            >
-              <div class="d-flex justify-content-center">
-                <img src="../../../assets/images/no-data.png" alt="" />
-              </div>
-            </ng-container>
-            <ng-container
-              *ngIf="showWalletDetails?.all_unconfirmed_records.length > 0"
-            >
-              <div class="d-flex flex-column justify-content-start mt-2 mb-5">
-                <div
-                  class="d-flex col-xl-12 col-md-12 col-sm-12 style-1"
-                  style="
-                    max-height: 400px !important;
-                    overflow-y: auto !important;
-                  "
-                >
-                  <table class="table table-dark table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Purchase Method</th>
-                        <th scope="col">Total Token Purchased</th>
-                        <th scope="col">Total Token Allocated</th>
-                        <th scope="col">Evm Wallet</th>
-                        <th scope="col">Sol Wallet</th>
-                        <th scope="col">Can Confirm</th>
-                      </tr>
-                    </thead>
-                    <tbody
-                      *ngFor="
-                        let data of showWalletDetails.all_unconfirmed_records;
-                        let i = index
-                      "
-                    >
-                      <tr>
-                        <td
-                          [style.color]="
-                            recordToUpdate.includes(data._id) ? '' : '#858585'
-                          "
-                        >
-                          {{ i + 1 }}
-                        </td>
-                        <td
-                          [style.color]="
-                            recordToUpdate.includes(data._id) ? '' : '#858585'
-                          "
-                        >
-                          {{ data?.purchase_method }}
-                        </td>
-                        <td
-                          [style.color]="
-                            recordToUpdate.includes(data._id) ? '' : '#858585'
-                          "
-                        >
-                          {{ data?.total_token_purchased }}
-                        </td>
-                        <td
-                          [style.color]="
-                            recordToUpdate.includes(data._id) ? '' : '#858585'
-                          "
-                        >
-                          {{ data?.total_token_allocated }}
-                        </td>
-                        <td
-                          [style.color]="
-                            recordToUpdate.includes(data._id) ? '' : '#858585'
-                          "
-                        >
-                          <div class="d-flex align-items-center">
-                            <span>
-                              {{
-                                data?.evm_wallet
-                                  ? (data?.evm_wallet )
-                                  : "-"
-                              }}
-                            </span>
-                            <i
-                              *ngIf="data?.evm_wallet"
-                              class="fa-solid fa-copy copy-icon"
-                              title="Copy Hash"
-                              style="margin-left: 3px"
-                              (click)="copyHashToClipboard(data?.evm_wallet)"
-                            ></i>
-                          </div>
-                        </td>
-                        <td
-                          [style.color]="
-                            recordToUpdate.includes(data._id) ? '' : '#858585'
-                          "
-                        >
-                          <div class="d-flex align-items-center">
-                            <span>
-                              {{
-                                data?.solana_wallet
-                                  ? (data?.solana_wallet )
-                                  : "-"
-                              }}
-                            </span>
-                            <i
-                              *ngIf="data?.evm_wallet"
-                              class="fa-solid fa-copy copy-icon"
-                              title="Copy Hash"
-                              style="margin-left: 3px"
-                              (click)="copyHashToClipboard(data?.evm_wallet)"
-                            ></i>
-                          </div>
-                        </td>
-                        <td
-                          class="text-center"
-                          [style.color]="
-                            recordToUpdate.includes(data._id) ? '' : '#858585'
-                          "
-                        >
-                          <!-- <label 
-                            >+</label
-                          >
-                          <label
-                            
-                            style="transform: rotate(45deg) scale(1.2)"
-                            >+</label
-                          > -->
-                          <i
-                            class="fa-solid fa-check"
-                            *ngIf="
-                              data?.solana_wallet
-                                ? data?.solana_wallet == publicKey
-                                : true
-                            "
-                            style="color: rgb(47, 179, 47)"
-                          ></i>
-                          <i
-                            class="fa-solid fa-xmark"
-                            style="color: rgb(255, 50, 50)"
-                            *ngIf="
-                              data?.solana_wallet
-                                ? data?.solana_wallet != publicKey
-                                : false
-                            "
-                          ></i>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <label class="cr-wrapper d-flex gap-2">
-                  <input
-                    type="checkbox"
-                    class="check-input"
-                    style="height: 20px; width: 20px"
-                    (change)="statusAgree($event)"
-                  />
-                  <div class="cr-input"></div>
-                  <span>Confirm your records</span>
-                </label>
-                <br />
-
-                <h6 class="text-white">
-                  Your tokens will be released based on the distribution
-                  schedule
-                </h6>
-
-                <h6 class="text-white">
-                  If your records are not correct, please email
-                  businessdevelopment{{ "@" }}utherverse.io
-                </h6>
-
-                <div
-                  class="col-xl-8 col-md-8 col-sm-12 d-flex flex-column mt-3 mb-3"
-                >
-                  <!-- <label for="solana_wallet">Evm Wallet</label>
-
-                  <div class="input-field bg-dark text-white mt-0">
-                    <label for="">{{ currentAccount }}</label>
-                  </div> -->
-
-                  <div class="mt-2">
-                    <label for="solana_wallet">Solana Wallet</label>
-                    <div class="input-field bg-dark text-white mt-0">
-                      <label for="">{{ publicKey }}</label>
-                    </div>
-                    <label for="">
-                      Note: You can only confirm when the solana wallet in
-                      records matches the connected Solana Wallet!</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </ng-container>
-          </ng-container>
-        </ng-container>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary text-white"
-          data-bs-dismiss="modal"
-        >
-          Close
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary bg-gradient-pink1 btn text-white rounded-pill px-4 py-2"
-          (click)="confirmAgree()"
-          data-bs-dismiss="modal"
-          [disabled]="
-            !statusPayload ||
-            userWalletFormGroup.get('solana_wallet')?.value === '' ||
-            !can_confirm
-          "
-          *ngIf="recordToUpdate?.length > 0"
-        >
-          Confirm
-        </button>
-      </div>
-    </div>
-  </div>
-</div>

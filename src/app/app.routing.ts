@@ -8,12 +8,8 @@ const Routes: Routes = [
     loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
   },
   {
-    path: 'stake',
-    loadComponent: () => import('./staking/staking.component').then(m => m.StakingComponent)
-  },
-  {
-    path: 'pools',
-    loadComponent: () => import('./pools/pools.component').then(m => m.PoolsComponent)
+    path: 'claim',
+    loadComponent: () => import('./claim/claim.component').then(m => m.claimComponent)
   },
   {
     path: '**',

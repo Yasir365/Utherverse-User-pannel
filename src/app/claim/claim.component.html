@@ -1,0 +1,197 @@
+<section class="pools">
+  <div class="logo">
+    <img src="../../../assets/images/New_Registered_Logo_with_Tag.png" alt="Logo" class="w-100" routerLink="/" />
+    
+  </div>
+
+  <div class="mt-5">
+    <h2 class="mt-2 text-center mb-3">Pools</h2>
+    
+    <table class="table listings__table bg-primary-dark">
+      <thead>
+        <th scope="col">#</th>
+        <th scope="col">Transaction Hash</th>
+        <th scope="col">wallet Address</th>
+        <th scope="col">Staked Amount</th>
+        <th scope="col">Contract Type</th>
+        <th scope="col">Status</th>
+        <th class="text-center">Actions</th>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="user_stake_list?.length > 0 && token && user_sol_wallet" >
+          <ng-container *ngFor=" let data of user_stake_list | paginate : { id: 'staking', itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: totalItems }; let i = index " >
+            <tr>
+              <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+  
+              <td>
+                <span title="{{ data?.hashAddress }}" >{{ data?.hashAddress?.slice(0, 20) }}... <i class="fa fa-copy" *ngIf="data?.hashAddress" (click)="copiedAddress(data?.hashAddress)" ></i ></span>
+              </td>
+  
+              <td>
+                <span title="{{ data?.signer }}" >{{ data?.signer?.slice(0, 20) }}... </span>
+              </td>
+  
+              <td>{{ data?.amount }}</td>
+  
+              <td>{{ data?.poolData[0]?.pool_name }}</td>
+  
+              <td>
+                <span class="badge">{{ data?.statuss }} </span>
+              </td>
+  
+              <td class="d-flex justify-content-center">
+                <button class="btn btn-sm btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#stakeingDetailModal" (click)="openStackDetail(data)" style="padding: 6px 8px" >
+                  <i class="fa-solid fa-circle-info" style="font-size: 1.2rem" ></i>
+                </button>
+  
+                <button class="btn btn-primary ms-1" (click)="claimStake(data)"> <!-- *ngIf=" !data.autoStake && checkValidTime(data?.stackDetails, 'claim')" --> Claim </button>
+                <button class="btn btn-primary ms-1" (click)="deStakeConfirm(data)" > <!-- *ngIf="checkValidTime(data.stackDetails, 'destake')" --> Destake </button>
+                <button class="btn btn-primary ms-1" (click)="restakeStake(data)"> <!-- *ngIf="!data.autoStake && checkValidTime(data.stackDetails, 'claim')" --> Restake </button>
+              </td>
+            </tr>
+          </ng-container>
+        </ng-container>
+        <ng-container *ngIf="user_stake_list?.length === 0 || !token || !user_sol_wallet" >
+          <tr>
+            <td colspan="13" class="text-center">No Records</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+    <pagination-controls class="d-flex justify-content-end align-items-end w-100" id="staking" (pageChange)="onPageChange($event)" > </pagination-controls>
+  
+  </div>
+</section>
+
+
+
+<div class="modal fade" id="stakeingDetailModal" tabindex="-1" role="dialog" aria-labelledby="stakeingDetailModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content bg-primary-dark text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title text-white">
+          Stake Details
+          <span *ngIf="selectedStake && selectedStake?.poolData.length > 0">
+            ({{ checkPoolInfo() }})
+          </span>
+        </h5>
+        <button
+          type="button"
+          class="close close-btn"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="bg-primary-dark text-white">
+          <div class="row" *ngIf="selectedStake">
+            <div class="col-6 item">
+              <strong>Staked Amount:</strong>
+              <span class="value">{{
+                calculateStakedAmount(selectedStake?.stackDetails.stakedAmount)
+              }}</span>
+            </div>
+            <div class="col-6 item">
+              <strong>Claim Cycles Passed:</strong>
+              <span class="value">{{
+                selectedStake?.stackDetails.claimCyclesPassed
+              }}</span>
+            </div>
+            <!-- <div class="col-6 item">
+              <strong>Autostake:</strong>
+              <span class="value">{{
+                selectedStake?.stackDetails.autostake
+              }}</span>
+            </div> -->
+            <div class="col-6 item">
+              <strong>Total Claim Cycles:</strong>
+              <span class="value">{{
+                selectedStake?.stackDetails.totalClaimCycles
+              }}</span>
+            </div>
+            <div class="col-6 item">
+              <strong>Unclaimed Rewards:</strong>
+              <span class="value">{{
+                calculateStakedAmount(
+                  selectedStake?.stackDetails.unclaimedRewards
+                )
+              }}</span>
+            </div>
+            <div class="col-6 item">
+              <strong>Deposit Time:</strong>
+              <span class="value">{{
+                formatTimestamp(selectedStake?.stackDetails.depositTimestamp)
+              }}</span>
+            </div>
+            <div class="col-6 item">
+              <strong>Last Interaction Time:</strong>
+              <span class="value">{{
+                formatSlotTime(selectedStake?.stackDetails, "LIT")
+              }}</span>
+            </div>
+            <div class="col-6 item">
+              <strong>Next Claim Time:</strong>
+              <span class="value"
+                >{{ formatSlotTime(selectedStake?.stackDetails, "NCT") }}
+              </span>
+            </div>
+            <div class="col-6 item">
+              <strong>Total Claimed:</strong>
+              <span class="value">{{
+                calculateStakedAmount(selectedStake?.stackDetails.totalClaimed)
+              }}</span>
+            </div>
+            <div class="col-6 item">
+              <strong>End Time:</strong>
+              <span class="value">{{
+                formatSlotTime(selectedStake?.stackDetails, "EDT")
+              }}</span>
+            </div>
+          </div>
+
+          <table
+            class="table listings__table listings__table--dark rounded"
+            *ngIf="selectedStake && selectedStake.sub_stake"
+          >
+            <thead>
+              <th scope="col">#</th>
+              <th scope="col">Transaction Hash</th>
+              <th scope="col">wallet Address</th>
+              <th scope="col">Type</th>
+              <th scope="col">Status</th>
+              <th scope="col">Created Date</th>
+            </thead>
+            <tbody>
+              <ng-container>
+                <ng-container
+                  *ngFor="let data of selectedStake.sub_stake; let i = index"
+                >
+                  <tr *ngIf="data.status === 'confirmed'">
+                    <td>{{ i + 1 }}</td>
+                    <td>
+                      <span title="{{ data?.hashAddress }}"
+                        >{{ data?.hashAddress?.slice(0, 20) }}...</span
+                      >
+                    </td>
+                    <td>
+                      <span title="{{ data?.signer }}"
+                        >{{ data?.signer?.slice(0, 20) }}...
+                      </span>
+                    </td>
+                    <td>{{ data?.type }}</td>
+                  </tr>
+                </ng-container>
+
+                <tr *ngIf="selectedStake.sub_stake.length === 0">
+                  <td colspan="6" class="text-center">No Records</td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
