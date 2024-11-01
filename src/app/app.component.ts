@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import constants from './constants/constants';
 import { LoginService } from './services/login.service';
 import { ToastrService } from 'ngx-toastr';
@@ -14,12 +14,6 @@ import { TokenSalesService } from './frontend/staking-pool/token-sales.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('toggleMaintainance') maintainance !: ElementRef
-  logoutProject: any;
-  url = `${constants.DOMAIN_URL}project/getProject/`;
-  alpha: boolean = false;
-
   constructor(
     private loginService: LoginService,
     private toastr: ToastrService,
