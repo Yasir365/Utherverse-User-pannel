@@ -1,162 +1,116 @@
-<header>
-  <nav style="position: sticky; top: 0; z-index: 90">
-    <div class="container-fluid">
-      <div class="d-flex justify-content-between align-items-center ps-3 pe-3 pt-2 pb-2">
-        <div class="logo">
-          <img src="../../../assets/images/New_Registered_Logo_with_Tag.png" alt="Logo" />
-        </div>
-
-        <div>
-          <button type="button" class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2" routerLink="/claim"> > Claim </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="carousel-rapper py-4">
-    <div class="container-fluid mt-3">
-      <div class="row justify-content-center">
-        <div class="col-sm-11 col-lg-11">
-          <div class="presale-live justify">
-            <h2 class="title text-center"> UTHX Token launch is<span> ON</span> - We need your Solana Phantom Wallet </h2>
-          </div>
-
-          <hr />
-
-          <div style="width: 100%" class="d-flex">
-            <div class="d-flex" id="buy-now" style=" padding: 15px; border-radius: 10px; font-size: 14px; color: white; width: 100%; " >
-              <div class="d-flex justify-content-between w-100 flex-wrapper-2" >
-                <div class="d-flex align-items-center flex-wrap gap-2">
-                  <span> Contract Address:</span >
-                  <span class="d-flex align-items-center">
-                    <a style="text-decoration: none; color: whitesmoke" href="https://solscan.io/token/CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD" target="_blank" class="text-truncate" >
-                      CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD
-                    </a
-                    >
-                    <i class="copy-button fa-solid fa-copy text-center ml-2 copy_icon" style="margin-left: 10px; cursor: pointer" (click)=" copied_msg() " ></i>
-                  </span>
-                </div>
-                <a class="bg-gradient-pink1 btn text-white rounded-pill px-4 py-2" href="https://raydium.io/swap/?inputMint=sol&outputMint=CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD" target="_blank" >Buy UTHX Token</a >
-              </div>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="row justify-content-between mb-2">
-            <div class="col-lg-4 col-12 my-md-4">
-              <div class="Overview_walletArea__TxteC" id="buy-now" >
-                <ng-container >
-                  <div class="text-white py-2">
-                    <h3 class="h2 text-break"> Exciting Update: Transition to Claims Page </h3>
-                  </div>
-
-                  <div class="text-white" style=" background-color: #26262a; padding: 30px 42px; border: 1px solid #7c7c7c; border-radius: 16px;" >
-                    <h2 class="h5 text-break" style="line-height: 25px">
-                      We are thrilled to announce that we are moving from our
-                      current airdrop system to a more streamlined Claims
-                      Process! During this transition, wallet registration is
-                      temporarily on hold as we work to bring you an exciting
-                      new feature that will enhance your experience and provide
-                      even greater opportunities. <br />
-                      <br />
-                      Our team is working hard to complete this upgrade, and the
-                      site will be back up as soon as possible. This shift to a
-                      claims page will give you more control, flexibility, and
-                      efficiency in managing your rewards. Stay tuned—great
-                      things are on the horizon! <br />
-                      <br />
-                      Thank you for your patience and enthusiasm as we continue
-                      to evolve. We're excited to share this new journey with
-                      all of our valued members!
-                    </h2>
-                  </div>
-                </ng-container>
-              </div>
-            </div>
-
-            <div class="col-lg-8 d-flex flex-column justify-content-stretch border-info my-md-5" >
-              <div class="video-rapper mt-3" >
-                <iframe width="100%" class="youtube-video" src="https://www.youtube.com/embed/2w2UckgtXG8?autoplay=1&mute=1&loop=1&playlist=2w2UckgtXG8&showinfo=0&rel=0&vq=hd1080&modestbranding=1&hd=1" allow="autoplay" frameborder="0" allowfullscreen > </iframe>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+<header class="d-flex justify-content-between">
+  <div class="logo">
+    <img src="../../../assets/images/New_Registered_Logo_with_Tag.png" alt="Logo" />
   </div>
+
+  <button type="button" class="btn btn-primary" routerLink="/claim"> Claim </button>
 </header>
 
+<h2 class="main-heading text-center"> UTHX Token launch is <span> ON</span> - We need your Solana Phantom Wallet </h2>
+<hr />
 
-<section class="info-sec">
-  <h4 class="mb-3"> Why do we need your Solana Phantom Wallet? </h4>
-  <ul  style="list-style: circle;" class="mb-5 ms-3">
-    <li class="h5">To ensure we can airdrop your UTHX tokens and allow you to claim them in the future.</li>
-  </ul>
-  
-  <h4 class="mb-3"> Who needs to provide us with a Phantom Wallet? If you fall into any of the following categories, you'll need to provide a wallet to receive your UTHX tokens: </h4>
-  <ul style="list-style: circle;" class="mb-5 ms-3">
-    <li class="h5"> Pre-purchase buyers: Individuals who bought UTHX during any pre-purchase round.</li>
-    <li class="h5"> Utherverse package buyers: Individuals who purchased packages from Utherverse. Which also came with UTHX tokens.</li>
-  </ul>
-  
-  <h4 class="mb-3"> If you purchased any other way other than through a crypto wallet those are being handled by our team, please reach out to businessdevelopment{{ "@" }}utherverse.io. </h4>
-  <ul  style="list-style: circle;" class="mb-5 ms-3">
-    <li class="h5"> We will be adding additional Solana-based wallets soon for your convenience.</li>
-  </ul>
-</section>
+<div class="d-flex justify-content-between" >
+  <div class="d-flex justify-content-between align-items-center">
+    <span> Contract Address: </span >
+    <span class="d-flex align-items-center">
+      <a style="text-decoration: none; color: whitesmoke" href="https://solscan.io/token/CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD" target="_blank" class="text-truncate" >
+        CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD
+      </a>
+      <i class="copy-button fa-solid fa-copy text-center ml-2 copy_icon" style="margin-left: 10px; cursor: pointer" (click)=" copied_msg() "></i>
+    </span>
+  </div>
+  <a class="btn btn-primary" href="https://raydium.io/swap/?inputMint=sol&outputMint=CZhaw3dtiDbXBLjKamco7cF1XwbQfZ2gNddN7UQhF3kD" target="_blank" >Buy UTHX Token</a >
+</div>
 
-<section class="subscribe-email d-flex flex-column align-items-start">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7 col-sm-11">
-        <p class="text-white py-2 fs-3">
-          <strong>FOR BUSINESS OR PRESS INQUIRIES CONTACT US:</strong>
-        </p>
-        <form #subForm="ngForm" (ngSubmit)="subEmail(subForm)" class="d-flex flex-column gap-3" action="" >
-          <label for="" class="text-white">EMAIL</label>
-          <input type="email" id="email" name="email" ngModel required placeholder="user@gmail.com" class="form-control-lg" />
-          <div *ngIf="subForm.controls.email?.dirty">
-            <div class="error" *ngIf="subForm.controls.email?.errors?.email"> Invalid email format. </div>
-          </div>
-          <button type="submit" [disabled]="!subForm.valid" type="submit" class="d-flex align-self-center submit-btn rounded-pill" >
-            SIGN UP
-          </button>
-        </form>
-      </div>
+<div class=" video mt-5">
+  <iframe width="100%" class="youtube-video" src="https://www.youtube.com/embed/2w2UckgtXG8?autoplay=1&mute=1&loop=1&playlist=2w2UckgtXG8&showinfo=0&rel=0&vq=hd1080&modestbranding=1&hd=1" allow="autoplay" frameborder="0" allowfullscreen > </iframe>
+</div>
+
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <div class="text-white" style=" background-color: #26262a; padding: 30px 42px; border: 1px solid #7c7c7c; border-radius: 16px;" >
+      <h3 class="text-center"> Exciting Update: Transition to Claims Page </h3>
+      <h2 class="h5 text-break mt-5" style="line-height: 25px">
+        We are thrilled to announce that we are moving from our
+        current airdrop system to a more streamlined Claims
+        Process! During this transition, wallet registration is
+        temporarily on hold as we work to bring you an exciting
+        new feature that will enhance your experience and provide
+        even greater opportunities. <br />
+        <br />
+        Our team is working hard to complete this upgrade, and the
+        site will be back up as soon as possible. This shift to a
+        claims page will give you more control, flexibility, and
+        efficiency in managing your rewards. Stay tuned—great
+        things are on the horizon! <br />
+        <br />
+        Thank you for your patience and enthusiasm as we continue
+        to evolve. We're excited to share this new journey with
+        all of our valued members!
+      </h2>
     </div>
   </div>
-</section>
+  
+  <div class="col-md-6"  style=" background-color: #26262a; padding: 30px 42px; border: 1px solid #7c7c7c; border-radius: 16px;">
+    <h4 class="mb-3"> Why do we need your Solana Phantom Wallet? </h4>
+    <ul  style="list-style: circle;" class="mb-5 ms-3">
+      <li class="h5">To ensure we can airdrop your UTHX tokens and allow you to claim them in the future.</li>
+    </ul>
+    
+    <h4 class="mb-3"> Who needs to provide us with a Phantom Wallet? If you fall into any of the following categories, you'll need to provide a wallet to receive your UTHX tokens: </h4>
+    <ul style="list-style: circle;" class="mb-5 ms-3">
+      <li class="h5"> Pre-purchase buyers: Individuals who bought UTHX during any pre-purchase round.</li>
+      <li class="h5"> Utherverse package buyers: Individuals who purchased packages from Utherverse. Which also came with UTHX tokens.</li>
+    </ul>
+    
+    <h4 class="mb-3"> If you purchased any other way other than through a crypto wallet those are being handled by our team, please reach out to businessdevelopment{{ "@" }}utherverse.io. </h4>
+    <ul  style="list-style: circle;" class="mb-5 ms-3">
+      <li class="h5"> We will be adding additional Solana-based wallets soon for your convenience.</li>
+    </ul>
+  </div>
+</div>
 
-<footer>
-  <div class="col-9 mx-auto d-flex justify-content-center py-5 mt-5">
-    <div class="col-12">
-      <div class="text-center">
-        <p class="text-white"> <strong>FOLLOW US</strong> </p>
-        <div class="d-flex justify-content-center gap-2 mt-2">
-          <a href="https://www.youtube.com/@utherverseio" class="social-media-icon" >
-            <img src="../../../assets/images/youtube.png" alt="" />
-          </a>
-          <a href="https://twitter.com/Utherverse" class="social-media-icon">
-            <img src="../../../assets/images/twitter2x.png" alt="" />
-          </a>
 
-          <a href="https://www.instagram.com/utherverse/" class="social-media-icon" >
-            <img src="../../../assets/images/instagram2x.png" alt="" />
-          </a>
-
-          <a href="https://discord.gg/uthers" class="social-media-icon">
-            <img src="../../../assets/images/Discord.png" alt="" />
-          </a>
-        </div>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4" style=" background-color: #26262a; padding: 30px 42px; border: 1px solid #7c7c7c; border-radius: 16px;">
+    <strong>FOR BUSINESS OR PRESS INQUIRIES CONTACT US:</strong>
+    <form #subForm="ngForm" (ngSubmit)="subEmail(subForm)" class="mt-3" action="" >
+      <input type="email" id="email" name="email" ngModel required placeholder="user@gmail.com" class="form-control" />
+      <div *ngIf="subForm.controls.email?.dirty">
+        <div class="error" *ngIf="subForm.controls.email?.errors?.email"> Invalid email format. </div>
       </div>
-      <div class="d-flex justify-content-center gap-2 text-white mt-3">
-        <button class="privacy_policy" data-bs-toggle="modal" data-bs-target="#personalPolicies" > Personal Data Policy </button>
-        <button class="privacy_policy" data-bs-toggle="modal" data-bs-target="#cookiesPolicies" > Cookie Policy </button>
-        <button class="privacy_policy" data-bs-toggle="modal" data-bs-target="#termCondition" > Terms and Conditions </button>
+      <div class="d-flex justify-content-center mt-3">
+        <button type="submit" [disabled]="!subForm.valid" type="submit" class="btn btn-primary" > SIGN UP </button>
       </div>
+    </form>
+  </div>
+</div>
+
+
+<footer class="mt-5">
+  <p class="text-center"> <strong>FOLLOW US</strong> </p>
+  <div class="text-center images">
+    <div class="d-flex justify-content-center gap-2 mt-2">
+      <a href="https://www.youtube.com/@utherverseio" class="social-media-icon" >
+        <img src="../../../assets/images/youtube.png" alt="" />
+      </a>
+      <a href="https://twitter.com/Utherverse" class="social-media-icon">
+        <img src="../../../assets/images/twitter2x.png" alt="" />
+      </a>
+
+      <a href="https://www.instagram.com/utherverse/" class="social-media-icon" >
+        <img src="../../../assets/images/instagram2x.png" alt="" />
+      </a>
+
+      <a href="https://discord.gg/uthers" class="social-media-icon">
+        <img src="../../../assets/images/Discord.png" alt="" />
+      </a>
     </div>
+  </div>
+  <div class="d-flex justify-content-center gap-2 text-white mt-3">
+    <button class="btn btn-primary "> Personal Data Policy </button>
+    <button class="btn btn-primary " > Cookie Policy </button>
+    <button class="btn btn-primary " > Terms and Conditions </button>
   </div>
   <div class="d-flex justify-content-center align-items-center py-2">
     <p class="text-white">
