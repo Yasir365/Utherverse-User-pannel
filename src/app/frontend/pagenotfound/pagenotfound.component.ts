@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-pagenotfound',
-  templateUrl: './pagenotfound.component.html',
-  styleUrls: ['./pagenotfound.component.css']
+  template: `
+  <div class="text-center">
+    <img src="../../../assets/img/nopage.png">
+  </div>
+  `,
 })
 export class PagenotfoundComponent implements OnInit {
 

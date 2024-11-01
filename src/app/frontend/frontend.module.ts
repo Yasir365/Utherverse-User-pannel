@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -13,16 +12,12 @@ import { ModifyAddressPipe } from '../core/pipes/modify-address.pipe';
 import { NumberCommaDirective } from '../number-comma.directive';
 import { ConvertToIntPipe } from '../core/pipes/convert-to-int.pipe';
 import { NgImageSliderModule } from 'ng-image-slider';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DecryptCryptoPipe } from '../services/decrypt-crypto.pipe';
 import { TruncatePipe } from '../services/truncate.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { StakingComponent } from './staking/staking.component';
-import { PoolsComponent } from './pools/pools.component';
 
 @NgModule({
   declarations: [
-    PagenotfoundComponent,
     NavbarComponent,
     FooterComponent,
     StringformationPipe,
@@ -30,11 +25,8 @@ import { PoolsComponent } from './pools/pools.component';
     ModifyAddressPipe,
     NumberCommaDirective,
     ConvertToIntPipe,
-    LandingPageComponent,
     DecryptCryptoPipe,
     TruncatePipe,
-    StakingComponent,
-    PoolsComponent
   ],
   imports: [
     CommonModule,

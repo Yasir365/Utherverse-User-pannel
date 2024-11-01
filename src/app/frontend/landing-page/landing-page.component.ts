@@ -24,14 +24,16 @@ import { ActivatedRoute, Router, RouterStateSnapshot } from '@angular/router';
 import { PublicService } from 'src/app/services/public/public.service';
 import constants from 'src/app/constants/constants';
 import { ProjectGetService } from 'src/app/services/project-get.service';
-import { NguCarouselConfig } from '@ngu/carousel';
+import { NguCarouselConfig, NguCarouselModule } from '@ngu/carousel';
 import { NguCarousel } from '@ngu/carousel';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {
   FormBuilder,
   FormControl,
   FormGroup,
+  FormsModule,
   NgForm,
+  ReactiveFormsModule,
   RequiredValidator,
   ValidatorFn,
   Validators,
@@ -77,6 +79,13 @@ import { EncryptCryptoService } from 'src/app/services/encrypt-crypto.service';
 import Web3 from 'web3';
 import { xyzABI } from 'src/app/services/xyzABI';
 import { TokenSalesService } from '../staking/token-sales.service';
+import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
+import { CommonModule } from '@angular/common';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NumberCommaDirective } from 'src/app/number-comma.directive';
+import { DecryptCryptoPipe } from 'src/app/services/decrypt-crypto.pipe';
 interface Time {
   minutes: number;
   seconds: number;
@@ -94,9 +103,21 @@ declare var window: MyWindow;
 window.Buffer = buffer.Buffer;
 
 @Component({
+  standalone: true,
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss'],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgApexchartsModule,
+    AngularSignaturePadModule,
+    NguCarouselModule,
+    NgImageSliderModule,
+    NgxPaginationModule,
+  ],
+  providers: [DecryptCryptoPipe],
 })
 export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly mobileBreakpoint: number = 768;

@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 const solanaWeb3 = require('@solana/web3.js');
 import constants from 'src/app/constants/constants';
 import CryptoJS from 'crypto-js';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { StakingPoolService } from 'src/app/services/staking/staking-pool.service';
 import { AnchorProvider, BN, Program, web3 } from '@project-serum/anchor';
 import * as anchor from '@project-serum/anchor';
@@ -23,17 +23,34 @@ import {
   u64,
   AccountInfo,
 } from '@solana/spl-token';
-import { DatePipe } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import Swal from 'sweetalert2';
 import { IDL } from 'src/app/services/staking/idl';
+import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
+import { NguCarouselModule } from '@ngu/carousel';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { DecryptCryptoPipe } from 'src/app/services/decrypt-crypto.pipe';
 
 declare let window: any;
 
 @Component({
+  standalone: true,
   selector: 'app-staking-pool',
   templateUrl: './pools.component.html',
   styleUrls: ['./pools.component.css'],
-  providers: [DatePipe],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgApexchartsModule,
+    AngularSignaturePadModule,
+    NguCarouselModule,
+    NgImageSliderModule,
+    NgxPaginationModule,
+  ],
+  providers: [DecryptCryptoPipe, DatePipe],
 })
 export class PoolsComponent implements OnInit {
   warningToastr: boolean = false;
