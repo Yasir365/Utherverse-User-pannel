@@ -16,8 +16,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { DecryptCryptoPipe } from '../services/decrypt-crypto.pipe';
 import { TruncatePipe } from '../services/truncate.pipe';
-import { StakingPoolComponent } from './staking-pool/staking-pool.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { StakingComponent } from './staking/staking.component';
+import { PoolsComponent } from './pools/pools.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     LandingPageComponent,
     DecryptCryptoPipe,
     TruncatePipe,
-    StakingPoolComponent,
+    StakingComponent,
+    PoolsComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AngularSignaturePadModule,
     NguCarouselModule,
     NgImageSliderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   exports: [NumberCommaDirective],
   providers: [DecryptCryptoPipe],

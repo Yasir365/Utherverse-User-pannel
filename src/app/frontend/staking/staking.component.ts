@@ -31,11 +31,11 @@ declare let window: any;
 
 @Component({
   selector: 'app-staking-pool',
-  templateUrl: './staking-pool.component.html',
-  styleUrls: ['./staking-pool.component.css'],
+  templateUrl: './staking.component.html',
+  styleUrls: ['./staking.component.css'],
   providers: [DatePipe],
 })
-export class StakingPoolComponent implements OnInit {
+export class StakingComponent implements OnInit {
   warningToastr: boolean = false;
   user_sol_wallet: any;
   user_sol_wallet_balance: number;

@@ -76,7 +76,7 @@ import { CountdownService } from 'src/app/services/countdown.service';
 import { EncryptCryptoService } from 'src/app/services/encrypt-crypto.service';
 import Web3 from 'web3';
 import { xyzABI } from 'src/app/services/xyzABI';
-import { TokenSalesService } from '../staking-pool/token-sales.service';
+import { TokenSalesService } from '../staking/token-sales.service';
 interface Time {
   minutes: number;
   seconds: number;

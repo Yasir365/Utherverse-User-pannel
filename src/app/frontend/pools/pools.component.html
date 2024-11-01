@@ -87,11 +87,11 @@
       >
         <p class="text-center" style="font-size: 24px">Stake your UTHX Token</p>
 
-        <form
+        <!-- <form
           [formGroup]="stakingForm"
           (ngSubmit)="createStake()"
           class="d-flex flex-column gap-4"
-        >
+        > -->
           <div class="d-flex flex-column gap-2">
             <label for="amount">Token Amount</label>
             <input
@@ -175,7 +175,7 @@
               </div>
             </button>
           </div>
-        </form>
+        <!-- </form> -->
       </div>
     </div>
 
@@ -250,11 +250,7 @@
             <!-- <td><span class="badge" ngClass="{{ data?.status ? 'bg-success' : 'bg-primary' }}"> {{ data?.autostake }} </span></td> -->
             <td>
               <span
-                class="badge"
-                ngClass="{{
-                  data?.status == 'pending' ? 'bg-warning' : 'bg-success'
-                }}"
-                >{{ data?.status | titlecase }}
+                class="badge">{{ data?.statuss }}
               </span>
             </td>
 
@@ -301,12 +297,7 @@
     </tbody>
   </table>
 
-  <pagination-controls
-    class="d-flex justify-content-end align-items-end w-100"
-    id="staking"
-    (pageChange)="onPageChange($event)"
-  >
-  </pagination-controls>
+  <!-- <pagination-controls class="d-flex justify-content-end align-items-end w-100" id="staking" (pageChange)="onPageChange($event)" > </pagination-controls> -->
 </div>
 
 <footer>
@@ -449,20 +440,6 @@
                       </span>
                     </td>
                     <td>{{ data?.type }}</td>
-                    <td>
-                      <span
-                        class="badge"
-                        ngClass="{{
-                          data?.status == 'pending'
-                            ? 'bg-warning'
-                            : 'bg-success'
-                        }}"
-                        >{{ data?.status | titlecase }}
-                      </span>
-                    </td>
-                    <td>
-                      {{ data?.createdAt | date : "YYYY MM, dd hh:mm a" }}
-                    </td>
                   </tr>
                 </ng-container>
 

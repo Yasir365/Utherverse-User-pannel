@@ -3,15 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { PagenotfoundComponent } from './frontend/pagenotfound/pagenotfound.component';
 import { RoutingService } from './services/routing.service';
 import { LandingPageComponent } from './frontend/landing-page/landing-page.component';
-import { StakingPoolComponent } from './frontend/staking-pool/staking-pool.component';
+import { StakingComponent } from './frontend/staking/staking.component';
+import { PoolsComponent } from './frontend/pools/pools.component';
 const Routes: Routes = [
   {
     path: '',
     component: LandingPageComponent,
   },
   {
+    path: 'pools',
+    component: PoolsComponent,
+  },
+  {
     path: 'stake',
-    component: StakingPoolComponent,
+    component: StakingComponent,
   },
   {
     path: '**',
